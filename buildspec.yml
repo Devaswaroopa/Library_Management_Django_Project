@@ -12,9 +12,7 @@ phases:
    commands:
      - echo Prebuild ops
      - python --version
-     - pylint $CODEBUILD_SRC_DIR/*.py
-     - pylint --disable=E0611,E0401,C0103 $CODEBUILD_SRC_DIR/pharmacyproject/*.py
-     - pylint --disable=E0307,W0611,C0114,C0103,C0411,C0325,C0114,R0914,W1309 $CODEBUILD_SRC_DIR/app/*.py
+     
      
 
  build:

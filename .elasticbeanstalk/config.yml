@@ -1,0 +1,6 @@
+branch-defaults:
+  main:
+    environment: Librarymanagement-env
+    group_suffix: null
+global:
+  profile: null
