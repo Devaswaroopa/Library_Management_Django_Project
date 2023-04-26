@@ -8,7 +8,8 @@ from lmsApp import models, forms
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
-from library.user import *
+
+
 
 def context_data(request):
     fullpath = request.get_full_path()
@@ -24,6 +25,7 @@ def context_data(request):
     }
 
     return context
+    
     
 def userregister(request):
     context = context_data(request)
@@ -146,6 +148,7 @@ def profile(request):
     context['page_title'] = "Profile"
     return render(request,'profile.html', context)
 
+
 # new libraries used here
 @login_required
 def users(request):
@@ -162,7 +165,6 @@ def manage_user(request, pk = None):
 @login_required
 def delete_user(request, pk = None):
     return delete_user_lib(request)
-
 @login_required
 def category(request):
     context = context_data(request)
