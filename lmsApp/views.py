@@ -156,11 +156,11 @@ def save_user(request):
     return save_user_lib(request)
     
 @login_required
-def manage_user(request):
+def manage_user(request, pk = None):
     return manage_user_lib(request)
 
 @login_required
-def delete_user(request):
+def delete_user(request, pk = None):
     return delete_user_lib(request)
 
 @login_required
